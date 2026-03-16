@@ -1,410 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blaze Peptides</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blaze Peptides</title>
 
-    body {
-      font-family: Geist, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top center, rgba(0, 255, 255, 0.08), transparent 28%),
-        linear-gradient(90deg, #0a1018 0%, #0d1420 15%, #101b2a 50%, #0d1420 85%, #0a1018 100%);
-      color: #ffffff;
-      min-height: 100vh;
-    }
+<style>
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .container {
-      max-width: 1250px;
-      margin: 0 auto;
-      padding: 40px 24px 70px;
-    }
+body{
+font-family:Geist, Helvetica, sans-serif;
+background:
+radial-gradient(circle at top center, rgba(0,255,255,0.08), transparent 28%),
+linear-gradient(90deg,#0a1018 0%,#0d1420 15%,#101b2a 50%,#0d1420 85%,#0a1018 100%);
+color:#ffffff;
+min-height:100vh;
+}
 
-    .hero {
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 110px;
-    }
+a{
+text-decoration:none;
+color:inherit;
+}
 
-    .hero-image {
-      width: 250px;
-      height: 250px;
-      margin: 0 auto 26px;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 0 35px rgba(0, 255, 255, 0.18);
-      background: linear-gradient(135deg, #0dcdd7, #0a8f9d);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.container{
+max-width:1250px;
+margin:0 auto;
+padding:40px 24px 70px;
+}
 
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.hero{
+text-align:center;
+margin-top:10px;
+margin-bottom:110px;
+}
 
-    .hero-image-placeholder {
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 16px;
-      padding: 20px;
-      text-align: center;
-      line-height: 1.5;
-    }
+.hero-image{
+width:250px;
+height:250px;
+margin:0 auto 26px;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 0 35px rgba(0,255,255,0.18);
+background:linear-gradient(135deg,#0dcdd7,#0a8f9d);
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
-    .hero h1 {
-      font-size: 70px;
-      font-weight: 800;
-      color: #36d9ff;
-      margin-bottom: 16px;
-      letter-spacing: -1.5px;
-      text-shadow: 0 0 18px rgba(54, 217, 255, 0.12);
-    }
+.hero-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
 
-    .hero p {
-      font-size: 21px;
-      color: #d7dce4;
-      font-weight: 400;
-    }
+.hero h1{
+font-size:70px;
+font-weight:800;
+color:#36d9ff;
+margin-bottom:16px;
+letter-spacing:-1.5px;
+text-shadow:0 0 18px rgba(54,217,255,0.12);
+}
 
-    .section-title {
-      text-align: center;
-      font-size: 58px;
-      font-weight: 800;
-      margin-bottom: 42px;
-      color: #f5f7fb;
-      letter-spacing: -1px;
-    }
+.hero p{
+font-size:21px;
+color:#d7dce4;
+font-weight:400;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 26px;
-      margin-bottom: 135px;
-    }
+/* TRUST BOX */
 
-    .card {
-      position: relative;
-      border: 2px solid rgba(255, 255, 255, 0.88);
-      border-radius: 24px;
-      padding: 34px 28px 28px;
-      background: rgba(11, 18, 28, 0.38);
-      backdrop-filter: blur(4px);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-      min-height: 355px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: visible;
-    }
+.trust-box{
+margin-top:28px;
+display:inline-flex;
+align-items:center;
+gap:12px;
+padding:14px 24px;
+border-radius:16px;
+border:2px solid rgba(255,255,255,0.85);
+background:rgba(11,18,28,0.38);
+backdrop-filter:blur(4px);
+font-size:18px;
+font-weight:700;
+color:#ffffff;
+}
 
-    .card:hover {
-      transform: scale(1.025);
-      box-shadow: 0 0 24px rgba(54, 217, 255, 0.12);
-      border-color: #ffffff;
-    }
+.trust-icon{
+font-size:22px;
+}
 
-    .card-top {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+/* SECTION TITLE */
 
-    .card-icon {
-      font-size: 42px;
-      margin-bottom: 6px;
-    }
+.section-title{
+text-align:center;
+font-size:58px;
+font-weight:800;
+margin-bottom:42px;
+color:#f5f7fb;
+letter-spacing:-1px;
+}
 
-    .card h3 {
-      font-size: 23px;
-      font-weight: 800;
-      color: #ffffff;
-    }
+/* CARDS */
 
-    .card p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #b4bfcb;
-      max-width: 95%;
-    }
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:26px;
+margin-bottom:135px;
+}
 
-    .visit-link {
-      margin-top: 28px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 16px;
-      font-weight: 700;
-      color: #ffffff;
-      transition: color 0.18s ease;
-    }
+.card{
+border:2px solid rgba(255,255,255,0.88);
+border-radius:24px;
+padding:34px 28px 28px;
+background:rgba(11,18,28,0.38);
+backdrop-filter:blur(4px);
+transition:transform .18s ease, box-shadow .18s ease;
+min-height:355px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
 
-    .visit-link:hover {
-      color: #36d9ff;
-    }
+.card:hover{
+transform:scale(1.025);
+box-shadow:0 0 24px rgba(54,217,255,0.12);
+}
 
-    .social-section {
-      text-align: center;
-      margin-bottom: 75px;
-    }
+.card-top{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
 
-    .social-grid {
-      display: flex;
-      justify-content: center;
-      margin-top: 34px;
-    }
+.card-icon{
+font-size:42px;
+margin-bottom:6px;
+}
 
-    .social-card {
-      width: 390px;
-      max-width: 100%;
-      border: 2px solid rgba(255, 255, 255, 0.88);
-      border-radius: 18px;
-      background: rgba(11, 18, 28, 0.38);
-      backdrop-filter: blur(4px);
-      padding: 24px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
+.card h3{
+font-size:23px;
+font-weight:800;
+}
 
-    .social-card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 20px rgba(54, 217, 255, 0.1);
-    }
+.card p{
+font-size:16px;
+line-height:1.7;
+color:#b4bfcb;
+}
 
-    .social-left {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      text-align: left;
-    }
+.visit-link{
+margin-top:28px;
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-size:16px;
+font-weight:700;
+}
 
-    .social-icon {
-      font-size: 34px;
-      color: #b7bfcc;
-    }
+.visit-link:hover{
+color:#36d9ff;
+}
 
-    .social-name {
-      font-size: 18px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 4px;
-    }
+/* SOCIAL */
 
-    .social-handle {
-      font-size: 15px;
-      color: #9ba7b4;
-    }
+.social-section{
+text-align:center;
+margin-bottom:75px;
+}
 
-    .social-arrow {
-      font-size: 28px;
-      color: #9ba7b4;
-    }
+.social-grid{
+display:flex;
+justify-content:center;
+margin-top:34px;
+}
 
-    .footer-note {
-      text-align: center;
-      color: #7c8795;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-top: 12px;
-    }
+.social-card{
+width:390px;
+max-width:100%;
+border:2px solid rgba(255,255,255,0.88);
+border-radius:18px;
+background:rgba(11,18,28,0.38);
+backdrop-filter:blur(4px);
+padding:24px 28px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+transition:transform .18s ease, box-shadow .18s ease;
+}
 
-    .footer-note strong {
-      color: #adb8c4;
-    }
+.social-card:hover{
+transform:scale(1.02);
+box-shadow:0 0 20px rgba(54,217,255,0.1);
+}
 
-    /* SWISS CHEMS POPPING BOX */
-    .best-card {
-      animation: slowPop 2.8s ease-in-out infinite;
-      box-shadow: 0 0 18px rgba(255, 70, 70, 0.12);
-    }
+.social-left{
+display:flex;
+align-items:center;
+gap:18px;
+text-align:left;
+}
 
-    .best-card:hover {
-      animation-play-state: paused;
-    }
+.social-icon{
+font-size:34px;
+}
 
-    @keyframes slowPop {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.035);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
+.social-name{
+font-size:18px;
+font-weight:700;
+margin-bottom:4px;
+}
 
-    /* DIAGONAL BEST TEXT */
-    .best-badge {
-      position: absolute;
-      top: -22px;
-      left: -18px;
-      transform: rotate(-32deg);
-      font-size: 58px;
-      font-weight: 900;
-      color: #ff3b30;
-      letter-spacing: 1px;
-      text-shadow:
-        0 0 10px rgba(255, 59, 48, 0.28),
-        0 0 18px rgba(255, 59, 48, 0.18);
-      pointer-events: none;
-      z-index: 5;
-    }
+.social-handle{
+font-size:15px;
+color:#9ba7b4;
+}
 
-    @media (max-width: 1100px) {
-      .hero h1 {
-        font-size: 54px;
-      }
+.social-arrow{
+font-size:28px;
+color:#9ba7b4;
+}
 
-      .section-title {
-        font-size: 44px;
-      }
+.footer-note{
+text-align:center;
+color:#7c8795;
+font-size:14px;
+line-height:1.6;
+margin-top:12px;
+}
 
-      .cards {
-        grid-template-columns: 1fr;
-        max-width: 760px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+.footer-note strong{
+color:#adb8c4;
+}
 
-      .best-badge {
-        top: -18px;
-        left: -10px;
-        font-size: 50px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .container {
-        padding: 30px 16px 50px;
-      }
-
-      .hero {
-        margin-bottom: 80px;
-      }
-
-      .hero-image {
-        width: 200px;
-        height: 200px;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .section-title {
-        font-size: 34px;
-      }
-
-      .card {
-        min-height: auto;
-      }
-
-      .social-card {
-        width: 100%;
-      }
-
-      .best-badge {
-        font-size: 42px;
-        top: -14px;
-        left: -4px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <div class="container">
 
-    <section class="hero">
-      <div class="hero-image">
-        <img src="pfp2.jpg" alt="Blaze Peptides Logo/Profile" />
-      </div>
+<div class="container">
 
-      <h1>Blaze Peptides</h1>
-      <p>Great Quality Peptides for Research. 1000+ customers satisfied!</p>
-    </section>
+<section class="hero">
 
-    <section>
-      <h2 class="section-title">Best Peptide Suppliers</h2>
+<div class="hero-image">
+<img src="pfp2.jpg" alt="Blaze Peptides Logo">
+</div>
 
-      <div class="cards">
-        <a class="card" href="https://swisschems.is" target="_blank">
-          <div class="card-top">
-            <div class="card-icon">🧪</div>
-            <h3>SwissChems</h3>
-            <p>
-              The best option available, known for the greatest product quality, fair pricing, and consistent reliability.
-            </p>
-          </div>
-          <span class="visit-link">Visit Site <span>→</span></span>
-        </a>
+<h1>Blaze Peptides</h1>
 
-        <a class="card" href="https://ruo.bio" target="_blank">
-          <div class="card-top">
-            <div class="card-icon">🧬</div>
-            <h3>RUO.bio</h3>
-            <p>
-              Large variety of peptides for research purposes, including many different products and newly developed compounds.
-            </p>
-          </div>
-          <span class="visit-link">Visit Site <span>→</span></span>
-        </a>
+<p>Great Quality Peptides for Research. 1000+ customers satisfied!</p>
 
-        <a class="card" href="https://pepti.wiki" target="_blank">
-          <div class="card-top">
-            <div class="card-icon">📚</div>
-            <h3>Pepti.Wiki</h3>
-            <p>
-              Search for peptides based on your specific needs. Each product also includes general information to help you learn more about it.
-            </p>
-          </div>
-          <span class="visit-link">Visit Site <span>→</span></span>
-        </a>
-      </div>
-    </section>
+<div class="trust-box">
+<span class="trust-icon">👥</span>
+Trusted by 1,000+ satisfied customers!
+</div>
 
-    <section class="social-section">
-      <h2 class="section-title">Follow for Premium Peptide Research</h2>
+</section>
 
-      <div class="social-grid">
-        <a class="social-card" href="https://tiktok.com/@blaze_kking" target="_blank">
-          <div class="social-left">
-            <div class="social-icon">🎵</div>
-            <div>
-              <div class="social-name">TikTok</div>
-              <div class="social-handle">@blaze_kking</div>
-            </div>
-          </div>
-          <div class="social-arrow">→</div>
-        </a>
-      </div>
+<section>
 
-      <div class="footer-note">
-        <strong>Research purposes only:</strong><br />
-        Everything on this website is strictly for laboratory research purposes only.
-        Nothing here is a medical advice, DYOR.
-      </div>
-    </section>
+<h2 class="section-title">Best Peptide Suppliers</h2>
 
-  </div>
+<div class="cards">
+
+<a class="card" href="https://swisschems.is" target="_blank">
+<div class="card-top">
+<div class="card-icon">🧪</div>
+<h3>SwissChems</h3>
+<p>
+The best option available, known for the greatest product quality,
+fair pricing, and consistent reliability.
+</p>
+</div>
+<span class="visit-link">Visit Site →</span>
+</a>
+
+<a class="card" href="https://ruo.bio" target="_blank">
+<div class="card-top">
+<div class="card-icon">🧬</div>
+<h3>RUO.bio</h3>
+<p>
+Large variety of peptides for research purposes,
+including many different products and newly developed compounds.
+</p>
+</div>
+<span class="visit-link">Visit Site →</span>
+</a>
+
+<a class="card" href="https://pepti.wiki" target="_blank">
+<div class="card-top">
+<div class="card-icon">📚</div>
+<h3>Pepti.Wiki</h3>
+<p>
+Search for peptides based on your specific needs.
+Each product also includes general information to help you learn more.
+</p>
+</div>
+<span class="visit-link">Visit Site →</span>
+</a>
+
+</div>
+
+</section>
+
+<section class="social-section">
+
+<h2 class="section-title">Follow for Premium Peptide Research</h2>
+
+<div class="social-grid">
+
+<a class="social-card" href="https://tiktok.com/@blaze_kking" target="_blank">
+
+<div class="social-left">
+
+<div class="social-icon">🎵</div>
+
+<div>
+<div class="social-name">TikTok</div>
+<div class="social-handle">@blaze_kking</div>
+</div>
+
+</div>
+
+<div class="social-arrow">→</div>
+
+</a>
+
+</div>
+
+<div class="footer-note">
+<strong>Research purposes only:</strong><br>
+Everything on this website is strictly for laboratory research purposes only.
+Nothing here is medical advice.
+</div>
+
+</section>
+
+</div>
+
 </body>
 </html>
